@@ -4,11 +4,11 @@ $(function () {
     $("#addBtn").click(addproduct);
   });
   function addproduct() {
-    var name = $("#name").val();
-    var price = $("#price").val();
-    var color = $("#color").val();
-    var department = $("#department").val();
-    var description = $("#description").val();
+    var name = $("#n1").val();
+    var price = $("#p1").val();
+    var color = $("#c1").val();
+    var department = $("#d1").val();
+    var description = $("#des1").val();
     $.ajax({
       url: "https://usman-recipes.herokuapp.com/api/products/",
       method: "POST",
@@ -32,23 +32,7 @@ $(function () {
       },
     });
   }
-  function loadproducts() {
-    $.ajax({
-      url: "https://usman-recipes.herokuapp.com/api/products",
-      method: "GET",
-      success: function (response) {
-        console.log(response);
-        var products = $("#products");
-        products.empty();
-        for (var i = 0; i < response.length; i++) {
-          var pro = response[i];
-          products.append(
-            `<div class="product" data-id="${pro._id}"><h3>${pro.name}</h3><p><button class="btn btn-danger btn-sm float-right">Delete</button> <button class="btn btn-warning btn-sm float-right">Update</button>Price:${pro.price}</br>Color:${pro.color}</br>Department:${pro.department}</br>Description:${pro.description}</p> </div>`
-          );
-        }
-      },
-    });
-  }
+  
 
   function loadOneproduct() {
     showSpinner();
