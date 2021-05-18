@@ -27,7 +27,7 @@
     <div id="BTN">
     <button
     type="button"
-    id="b"
+    id="button"
     class="btn btn-primary btn-md"
     data-toggle="modal"
     data-target="#addModal"
@@ -36,19 +36,19 @@
     </button>
 </div>
 
-    <div id="prodts">loading...</div>
+    <div id="products">loading...</div>
    
     <div
-      class="usman fade"
-      id="addthemodal"
+      class="modal fade"
+      id="addModal"
       tabindex="-1"
       role="dialog"
       aria-labelledby="modelTitleId"
       aria-hidden="true"
     >
-      <div class="modal-fade" role="document">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-head">
+          <div class="modal-header">
             <h5 class="modal-title">Add New Product</h5>
             <button
               type="button"
@@ -59,14 +59,14 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-wholebody">
+          <div class="modal-body">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input
                   type="text"
                   class="form-control"
                   name="name"
-                  id="n1"
+                  id="name"
                   aria-describedby="nameHelp"
                   placeholder="Name of the Product"
                 />
@@ -118,7 +118,7 @@
               <input
                 type="text"
                 class="form-control"
-                name="n1"
+                name="description"
                 id="description"
                 aria-describedby="descriptionHelp"
                 placeholder="Description of Product"
